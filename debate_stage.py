@@ -15,8 +15,8 @@ st.set_page_config(
 )
 
 # ---------- Hardcode default keys here if you don't want to paste them every run ----------
-DEFAULT_GROQ_API_KEY = "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"
-DEFAULT_GEMINI_API_KEY = "AQ.Ab8RN6IJ_QUUcqoFI9lbjmb7EIVCp5HHHOFiLRkbxQMcAEBRnA"
+DEFAULT_GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", "")
+DEFAULT_GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", "")
 
 # Note: Groq retired llama-3.1-8b-instant and llama-3.3-70b-versatile on 2026-08-16.
 # They're left in the list below since they were asked for, but selecting one will
